@@ -1,19 +1,20 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import "./bootstrap.min.css"
-import "./layout.css"
+import "../../styles/bootstrap.min.css"
+import "./Layout.css"
+import "../../styles/main.css"
+import "../../styles/variables.css"
+import Navabar from "../Navbar"
 
 const Layout = ({ children }) => {
-  return <>{children}</>
+  return (
+    <>
+      <Navabar></Navabar>
+      {children}
+    </>
+  )
 }
 
 Layout.propTypes = {
